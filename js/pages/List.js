@@ -1,0 +1,182 @@
+import { store } from "../main.js";
+import { embed } from "../util.js";
+import { score } from "../score.js";
+import { fetchEditors, fetchList } from "../content.js";
+
+import Spinner from "../components/Spinner.js";
+
+const roleIconMap = {
+    owner: "crown",
+    admin: "user-gear",
+    helper: "user-shield",
+    dev: "code",
+    trial: "user-lock",
+};
+
+export default {
+    components: { Spinner },
+    template: `
+        <main v-if="loading">
+            <Spinner></Spinner>
+        </main>
+        <main v-else class="page-list">
+            <div class="list-container">
+                <table class="list" v-if="list">
+                    <tr v-for="([level, err], i) in list">
+                        <td class="rank">
+                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-else class="type-label-lg">Legacy</p>
+                        </td>
+                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                            <button @click="selected = i">
+                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="level-container">
+                <div class="level" v-if="level">
+                    <h1>{{ level.name }}</h1>
+                    
+                    <!-- Исправленная верстка с правильными цветами и названиями -->
+                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <div v-if="level.author">
+                            <div class="type-title-sm" style="text-transform: uppercase; font-size: 0.75rem; color: #555; font-weight: 600;">Publisher</div>
+                            <p class="type-label-lg" style="margin: 0.2rem 0 0 0;">{{ level.author }}</p>
+                        </div>
+                        <div v-if="level.verifier">
+                            <div class="type-title-sm" style="text-transform: uppercase; font-size: 0.75rem; color: #555; font-weight: 600;">First Victor</div>
+                            <p class="type-label-lg" style="margin: 0.2rem 0 0 0;">{{ level.verifier }}</p>
+                        </div>
+                        <div v-if="level.publisher">
+                            <div class="type-title-sm" style="text-transform: uppercase; font-size: 0.75rem; color: #555; font-weight: 600;">Publisher</div>
+                            <p class="type-label-lg" style="margin: 0.2rem 0 0 0;">{{ level.publisher }}</p>
+                        </div>
+                    </div>
+                    
+                    <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
+                    <ul class="stats">
+                        <li>
+                            <div class="type-title-sm">Points when completed</div>
+                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">ID</div>
+                            <p>{{ level.id }}</p>
+                        </li>
+                        <li>
+                            <div class="type-title-sm">Password</div>
+                            <p>{{ level.password || 'Free to Copy' }}</p>
+                        </li>
+                    </ul>
+                    <h2>Records</h2>
+                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p v-else>This level does not accept new records.</p>
+                    <table class="records">
+                        <tr v-for="record in level.records" class="record">
+                            <td class="percent">
+                                <p>{{ record.percent }}%</p>
+                            </td>
+                            <td class="user">
+                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                            </td>
+                            <td class="mobile">
+                                <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
+                            </td>
+                            <td class="hz">
+                                <p>{{ record.hz }}Hz</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
+                    <p>(ノಠ益ಠ)но彡┻━┻</p>
+                </div>
+            </div>
+            <div class="meta-container">
+                <div class="meta">
+                    <div class="errors" v-show="errors.length > 0">
+                        <p class="error" v-for="error of errors">{{ error }}</p>
+                    </div>
+                    <div class="og">
+                        <p class="type-label-md">Website made by <a href="https://youtube.com" target="_blank">kanonsik</a></p>
+                    </div>
+                    <template v-if="editors">
+                        <h3>beb3lb</h3>
+                        <ol class="editors">
+                            <li v-for="editor in editors">
+                                <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
+                                <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">{{ editor.name }}</a>
+                                <p v-else>{{ editor.name }}</p>
+                            </li>
+                        </ol>
+                    </template>
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </main>
+    `,
+    data: () => ({
+        list: [],
+        editors: [],
+        loading: true,
+        selected: 0,
+        errors: [],
+        roleIconMap,
+        store
+    }),
+    computed: {
+        level() {
+            // Строго оригинальная строка с извлечением [0] элемента массива уровня
+            return this.list[this.selected] ? this.list[this.selected][0] : null;
+        },
+        video() {
+            if (!this.level || !this.level.showcase) {
+                return embed(this.level?.verification);
+            }
+
+            return embed(
+                this.toggledShowcase
+                    ? this.level.showcase
+                    : this.level.verification
+            );
+        }
+    },
+    async mounted() {
+        this.list = await fetchList();
+        this.editors = await fetchEditors();
+
+        if (!this.list) {
+            this.errors = [
+                "Failed to load list. Retry in a few minutes or notify list staff.",
+            ];
+        } else {
+            this.errors.push(
+                ...this.list
+                    .filter(([_, err]) => err)
+                    .map(([_, err]) => {
+                        return `Failed to load level. (${err}.json)`;
+                    })
+            );
+            if (!this.editors) {
+                this.errors.push("Failed to load list editors.");
+            }
+        }
+
+        this.loading = false;
+    },
+    methods: {
+        embed,
+        score,
+    },
+};
