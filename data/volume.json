@@ -3,11 +3,17 @@
     "name": "Volume",
     "author": "MetalFace221",
     "creators": ["MetalFace221 & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/kh70Ic_REAA?si=-9h7V8LIEd46Hjdo",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/gcU95Pxp-9Y?si=Xj0vARwR4VXONh1E",
     "percentToQualify": 64,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/kh70Ic_REAA?si=-9h7V8LIEd46Hjdo",
+            "percent": 100,
+            "hz": 200
+        },
         {
             "user": "KanOne",
             "link": "-",
