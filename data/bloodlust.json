@@ -1,0 +1,18 @@
+{
+    "id": 42584142,
+    "name": "Bloodlust",
+    "author": "knobbelboy",
+    "creators": ["Quasar & More"],
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/5SqGkDWmNe4?si=Q5WrsY-U3abyoedO",
+    "percentToQualify": 67,
+    "password": "Free To Copy",
+    "records": [
+      {
+            "user": "S1zE",
+            "link": "-",
+            "percent": 71,
+            "hz": 165
+        }
+    ]
+}
