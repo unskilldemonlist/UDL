@@ -3,10 +3,16 @@
     "name": "Arctic Lights",
     "author": "MetalFace221",
     "creators": ["EndLevel & iIiViRuZiIi & Hantein"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/nSnBQOblJws?si=TY1z-A9jrDHeljII",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/zygfybRZUdg?si=JkOAqWjIQETtWexw",
     "percentToQualify": 51,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/nSnBQOblJws?si=TY1z-A9jrDHeljII",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
