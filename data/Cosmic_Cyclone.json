@@ -3,10 +3,16 @@
     "name": "Cosmic Cyclone",
     "author": "APTeam",
     "creators": ["APTeam & Cyclic"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/U_lOAIBhYrE?si=s0TdpYwMcqOu_V3e",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/blWYoiPTUgY?si=11-_n2YYIEajchaF",
     "percentToQualify": "57",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/U_lOAIBhYrE?si=s0TdpYwMcqOu_V3e",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
