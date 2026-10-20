@@ -3,11 +3,17 @@
     "name": "Quantum Processing",
     "author": "Riot",
     "creators": ["Riot & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/n5wo2-SXhfg?si=p8svKPlBewr9c6Dr",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/N52zex5l5q4?si=om5ezRrcS6YXhp7s",
     "percentToQualify": 58,
     "password": "Free To Copy",
     "records": [
+       {
+            "user": "kanonsik",
+            "link": "https://youtu.be/n5wo2-SXhfg?si=p8svKPlBewr9c6Dr",
+            "percent": 100,
+            "hz": 144
+        },
         {
             "user": "S1zE",
             "link": "https://youtu.be/1QKOl-m6nSo?si=awSOB6-ryE-bvrV4",
