@@ -3,10 +3,16 @@
     "name": "Forbidden Isle",
     "author": "Sillow",
     "creators": ["Sillow"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/MLm4izeNaKc?si=UdNhHsQBVcYIkduN",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/Y1Kmr69NiFg?si=3Y2hvVicctpxYUKf",
     "percentToQualify": 66,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/MLm4izeNaKc?si=UdNhHsQBVcYIkduN",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
