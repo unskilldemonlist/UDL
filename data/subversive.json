@@ -8,5 +8,11 @@
     "percentToQualify": 54,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Vergus",
+            "link": "https://youtu.be/XfyjpgICn5U?si=dYGQfXriNrnEqpjS",
+            "percent": 100,
+            "hz": 144
+        }
     ]
 }
