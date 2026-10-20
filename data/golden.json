@@ -3,10 +3,16 @@
     "name": "The Golden",
     "author": "Bo",
     "creators": ["Bo & more"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/yzdJyq6yIAk",
+    "verifier": "vaflya",
+    "verification": "https://youtu.be/wXpX5vIStDI?si=GxpecT9S-Lhl98pM",
     "percentToQualify": 50,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/yzdJyq6yIAk",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
