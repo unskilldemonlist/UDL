@@ -3,10 +3,16 @@
     "name": "Carcano",
     "author": "Asuith",
     "creators": ["TomsoN & Asuith"],
-    "verifier": "kanonsik",
-    "verification": "https://www.youtube.com/watch?v=pgNuX5mhZUQ",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/xKeH2_qAAwo?si=p8wlHs0dzYHU2h8y",
     "percentToQualify": 59,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://www.youtube.com/watch?v=pgNuX5mhZUQ",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
