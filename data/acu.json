@@ -3,11 +3,17 @@
     "name": "Acu",
     "author": "neigefeu",
     "creators": ["neigefeu"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/ZjP9JVhwQys?si=RsdF6BcjF_dqp_bq",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/QCRanXCbY6c?si=BBnmaNY-8QFGlyUn",
     "percentToQualify": "63",
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/ZjP9JVhwQys?si=RsdF6BcjF_dqp_bq",
+            "percent": 100,
+            "hz": 200
+        },
         {
             "user": "goldyy10",
             "link": "-",
