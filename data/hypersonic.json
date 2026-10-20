@@ -3,10 +3,16 @@
     "name": "Hypersonic",
     "author": "ViPriN",
     "creators": ["ViPriN & More"],
-    "verifier": "kanonsik",
-    "verification": "https://www.youtube.com/watch?v=TmHieqkQKww",
+    "verifier": "vaflya",
+    "verification": "https://youtu.be/HItFwkkckps?si=oA5NsrdcS1-vMPRz",
     "percentToQualify": 60,
     "password": "Free To Copy",
     "records": [
+         {
+            "user": "kanonsik",
+            "link": "https://www.youtube.com/watch?v=TmHieqkQKww",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
