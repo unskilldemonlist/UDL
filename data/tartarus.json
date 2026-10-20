@@ -3,10 +3,22 @@
     "name": "Tartarus",
     "author": "ItzDolphy",
     "creators": ["Riot & More"],
-    "verifier": "kanonsik",
-    "verification": "https://www.youtube.com/watch?v=TVv8Yqgg7wY",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/iX17KZSVe4Y?si=oQ6k-goQxLhtH6Ms",
     "percentToQualify": 47,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://www.youtube.com/watch?v=TVv8Yqgg7wY",
+            "percent": 100,
+            "hz": 200
+        },
+        {
+            "user": "Vaflya",
+            "link": "-",
+            "percent": 100,
+            "hz": 144
+        }
     ]
 }
