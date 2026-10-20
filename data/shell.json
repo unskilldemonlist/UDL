@@ -3,10 +3,16 @@
     "name": "Sakupen Hell",
     "author": "TrusTa",
     "creators": ["Noobas"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/aNYFnhYqe3Y?si=KJOO31qdHf989I0q",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/bkxwoySvB1M?si=r3doY-hoTnR92Hgq",
     "percentToQualify": 50,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/aNYFnhYqe3Y?si=KJOO31qdHf989I0q",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
