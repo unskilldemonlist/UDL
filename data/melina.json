@@ -3,10 +3,16 @@
     "name": "Me Lin A",
     "author": "nickxd",
     "creators": ["nickxd & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/mAPQxL1cvPs",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/9LSRSMtr5pw?si=XyXh_eN5PcPWY_sz",
     "percentToQualify": 61,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/mAPQxL1cvPs",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
