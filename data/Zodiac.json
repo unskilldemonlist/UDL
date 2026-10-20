@@ -3,10 +3,16 @@
     "name": "Zodiac",
     "author": "Bianox",
     "creators": ["RicoLP & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/x4NZMhnK0BI?si=_y7OVUs25M1hV8fT",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/JaeSBdZ8DVw?si=cZ6a1BsL06iFD0ix",
     "percentToQualify": 52,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/x4NZMhnK0BI?si=_y7OVUs25M1hV8fT",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
