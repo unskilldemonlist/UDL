@@ -3,10 +3,16 @@
     "name": "Yatagarasu",
     "author": "TrusTa",
     "creators": ["Giron & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/ZgoQgFjDg6g?si=8yD0WDVqEe4ykrGa",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/up6YRM3I4TI?si=CbKQRI9FC0T8sxfi",
     "percentToQualify": 58,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/ZgoQgFjDg6g?si=8yD0WDVqEe4ykrGa",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
