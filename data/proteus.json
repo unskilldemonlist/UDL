@@ -3,10 +3,16 @@
     "name": "Proteus",
     "author": "SpergQuos",
     "creators": ["SpergQuos & More"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/mj84HaXEuIs?si=wrq3ye41P7fx6-6V",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/NrE9sHy2lRs?si=tjGlL-9JGRQpjNXz",
     "percentToQualify": 61,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/mj84HaXEuIs?si=wrq3ye41P7fx6-6V",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
