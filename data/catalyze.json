@@ -3,10 +3,16 @@
     "name": "Catalyze",
     "author": "ZephiroX",
     "creators": ["ZephiroX"],
-    "verifier": "kanonsik",
-    "verification": "https://youtu.be/uS4AjnLkqZg",
+    "verifier": "Vergus",
+    "verification": "https://youtu.be/89TJny5QucA?si=raxDx5DTHwNEv9l7",
     "percentToQualify": 55,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/uS4AjnLkqZg",
+            "percent": 100,
+            "hz": 200
+        }
     ]
 }
