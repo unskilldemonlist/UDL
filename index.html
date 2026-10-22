@@ -30,10 +30,11 @@
             type="text/css"
             href="/css/components/tabs.css"
         />
-        <!-- ИСПРАВЛЕНО: Добавлен defer, чтобы выстроить правильную очередь загрузки перед main.js -->
-        <script src="https://unpkg.com" defer></script>
-        <script src="https://unpkg.com" defer></script>
-        <script type="module" src="/js/main.js"></script>
+        <!-- Скрипты загружаются строго перед кодом приложения -->
+        <script src="https://unpkg.com"></script>
+        <script src="https://unpkg.com"></script>
+        <!-- ФИКС КЭША: Добавлен ?v=2, чтобы заставить браузер мгновенно обновиться -->
+        <script type="module" src="/js/main.js?v=2"></script>
     </head>
     <body id="app">
         <header :class="{ dark: store.dark }">
@@ -52,7 +53,7 @@
                     <span class="type-label-lg">Running Roulette</span>
                 </router-link>
                 <div class="nav__actions">
-                    <!-- КНОПКА ТЕМЫ: В вашем оригинальном виде и со всеми вашими стилями -->
+                    <!-- КНОПКА ТЕМЫ: В вашем оригинальном виде со всеми обводками -->
                     <button
                         class="nav__icon"
                         @click.prevent="store.toggleDark()"
@@ -63,7 +64,7 @@
                         />
                     </button>
                     
-                    <!-- КНОПКА ДИСКОРДА: Картинки меняются местами через чистый CSS -->
+                    <!-- КНОПКА ДИСКОРДА: Картинки переключаются автоматически через CSS -->
                     <a class="nav__icon discord-link" href="https://discord.gg">
                         <img src="/assets/discord.svg" alt="Discord Logo" class="icon-light" />
                         <img src="/assets/discord-dark.svg" alt="Discord Logo" class="icon-dark" />
@@ -80,7 +81,7 @@
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
 
-        <!-- Чистый блок стилей переключения иконок дискорда без вмешательства в ховеры темы -->
+        <!-- Чистый блок стилей переключения иконок Дискорда -->
         <style>
             header .discord-link .icon-light { display: inline-block; }
             header .discord-link .icon-dark { display: none; }
