@@ -35,6 +35,7 @@
         <script type="module" src="/js/main.js"></script>
     </head>
     <body id="app">
+        <!-- Тег header принимает класс dark. Мы используем это для переключения картинок через CSS -->
         <header :class="{ dark: store.dark }">
             <div class="logo">
                 <h2>UDL</h2>
@@ -51,7 +52,7 @@
                     <span class="type-label-lg">Running Roulette</span>
                 </router-link>
                 <div class="nav__actions">
-                    <!-- 1. Вернули кнопку смены темы на первое место с оригинальными тегами и стилями -->
+                    <!-- КНОПКА ТЕМЫ: Полностью возвращена к твоему ОРИГИНАЛЬНОМУ, рабочему виду -->
                     <button
                         class="nav__icon"
                         @click.prevent="store.toggleDark()"
@@ -61,11 +62,14 @@
                             alt=""
                         />
                     </button>
-                    <!-- 2. Поставили кнопку Дискорда на её законное второе место. Иконка подменяется динамически -->
-                    <a class="nav__icon" href="https://discord.gg">
-                        <img :src="store.dark ? '/assets/discord-dark.svg' : '/assets/discord.svg'" alt="Discord Logo" />
+                    
+                    <!-- КНОПКА ДИСКОРДА: Обычные статичные пути, которые никогда не сломают Vue -->
+                    <a class="nav__icon discord-link" href="https://discord.gg">
+                        <img src="/assets/discord.svg" alt="Discord Logo" class="icon-light" />
+                        <img src="/assets/discord-dark.svg" alt="Discord Logo" class="icon-dark" />
                     </a>
-                    <!-- List record submission form, add a link to replace the '#' when putting a link to your list submission form-->
+
+                    <!-- Форма отправки рекордов UDL -->
                     <a
                         class="nav__cta type-label-lg"
                         href="https://google.com"
@@ -76,5 +80,16 @@
             </nav>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
+
+        <!-- Чистый CSS-блок переключения иконок Дискорда без костылей и инлайнов -->
+        <style>
+            /* В обычном режиме показываем светлую иконку, скрываем темную */
+            header .discord-link .icon-light { display: inline-block; }
+            header .discord-link .icon-dark { display: none; }
+
+            /* Когда на header накладывается класс .dark, плавно меняем их местами */
+            header.dark .discord-link .icon-light { display: none; }
+            header.dark .discord-link .icon-dark { display: inline-block; }
+        </style>
     </body>
 </html>
