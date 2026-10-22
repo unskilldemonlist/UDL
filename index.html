@@ -30,7 +30,6 @@
             type="text/css"
             href="/css/components/tabs.css"
         />
-        <!-- Оригинальные стабильные скрипты оставлены без изменений, чтобы ничего не ломалось -->
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
@@ -51,26 +50,21 @@
                 <router-link class="nav__tab" to="/roulette">
                     <span class="type-label-lg">Roulette</span>
                 </router-link>
-                <div class="nav__actions" style="display: flex; align-items: center; gap: 0.5rem;">
-                    
-                    <!-- Кнопка Дискорда с двумя иконками под разные темы (Переключается мгновенно через CSS) -->
-                    <a class="nav__icon discord-link" href="https://discord.gg/wrE3PTVmjD" target="_blank" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background-color 100ms ease;">
-                        <img src="/assets/discord.svg" alt="Discord" class="icon-light" style="height: 1.5rem; width: auto;" />
-                        <img src="/assets/discord-dark.svg" alt="Discord" class="icon-dark" style="height: 1.5rem; width: auto; display: none;" />
-                    </a>
-
+                <div class="nav__actions">
                     <button
-                        class="nav__icon theme-toggle-btn"
+                        class="nav__icon"
                         @click.prevent="store.toggleDark()"
-                        style="background-color: transparent; border: none; cursor: pointer; border-radius: 50%; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; transition: background-color 100ms ease;"
                     >
                         <img
                             :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
                             alt=""
-                            style="height: 1.5rem;"
                         />
                     </button>
-                    <!-- Ссылка на Google-форму отправки рекордов UDL -->
+                    <!-- Replace the '#' with your discord server's invite-->
+                    <a class="nav__icon" href="https://discord.gg/wrE3PTVmjD">
+                        <img src="/assets/discord.svg" alt="Discord Logo" />
+                    </a>
+                    <!-- List record submission form, add a link to replace the '#' when putting a link to your list submission form-->
                     <a
                         class="nav__cta type-label-lg"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSc3sYlDqF6woY2zkpQNnAcI4r0fQPitbbsKtbjX7UZadVfawQ/viewform?usp=preview"
@@ -81,21 +75,5 @@
             </nav>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
-
-        <!-- Блок стилей для автоматического переключения иконок и красивого серого кружка ховера -->
-        <style>
-            /* СВЕТЛАЯ ТЕМА (шапка чёрная): показываем стандартную белую иконку, скрываем тёмную */
-            header .discord-link .icon-light { display: inline-block !important; }
-            header .discord-link .icon-dark { display: none !important; }
-
-            /* ТЁМНАЯ ТЕМА (шапка белая): скрываем белую иконку, показываем вашу discord-dark.svg */
-            header.dark .discord-link .icon-light { display: none !important; }
-            header.dark .discord-link .icon-dark { display: inline-block !important; }
-
-            /* Универсальный адаптивный серый кружок ховера для обеих кнопок при наведении мыши */
-            .nav .nav__actions .nav__icon:hover {
-                background-color: rgba(128, 128, 128, 0.25) !important;
-            }
-        </style>
     </body>
 </html>
