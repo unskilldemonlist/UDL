@@ -31,7 +31,8 @@ export default {
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td>
                             <td class="total">
-                                <p class="type-label-lg">{{ localize(ientry.total) }}</p>
+                                <!-- Обернули в Number(), чтобы отсечь лишние нули -->
+                                <p class="type-label-lg">{{ localize(Number(ientry.total)) }}</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
@@ -51,9 +52,10 @@ export default {
                                  alt=""
                                  style="width: 32px; height: auto; border-radius: 3px; box-shadow: 0 0 2px rgba(0,0,0,0.3); margin-left: 0.6rem; vertical-align: middle; display: inline-block;" />
                         </h1>
-                        <h3 style="text-align: left; margin-bottom: 2.5rem;">{{ entry.total }}</h3>
+                        <!-- Здесь тоже убираем лишние нули через Number() -->
+                        <h3 style="text-align: left; margin-bottom: 2.5rem;">{{ Number(entry.total) }}</h3>
                         
-                        <!-- Блок Hardest Level (Исправлен и защищен от пропадания) -->
+                        <!-- Блок Hardest Level -->
                         <template v-if="hardestLevel && hardestLevel.rank">
                             <h2 style="text-align: left; margin-bottom: 0.1rem;">Hardest Level</h2>
                             <div style="display: flex; gap: 0.6rem; justify-content: flex-start; align-items: baseline; margin-bottom: 3rem;">
@@ -114,7 +116,6 @@ export default {
 
             if (allPassed.length === 0) return null;
 
-            // ФИКС: Инициализируем minLevel как первый ОБЪЕКТ массива (allPassed[0]), а не весь массив целиком
             let minLevel = allPassed[0];
             for (let i = 1; i < allPassed.length; i++) {
                 if (allPassed[i] && minLevel && Number(allPassed[i].rank) < Number(minLevel.rank)) {
