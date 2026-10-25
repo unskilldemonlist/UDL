@@ -19,9 +19,3 @@ const router = VueRouter.createRouter({
 app.use(router);
 
 app.mount('#app');
-data() {
-    return {
-        store,
-        listsOpen: false, // <-- добавьте эту строчку
-    };
-},
