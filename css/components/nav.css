@@ -53,30 +53,3 @@
 .nav .nav__actions .nav__cta:hover:not(:active) {
     transform: translateY(-2px);
 }
-/* Стили для выпадающего меню Lists */
-.nav-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-bg-surface, #1e2124);
-    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    min-width: 140px;
-    z-index: 999;
-    flex-direction: column;
-    padding: 0.5rem 0;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu {
-    display: flex;
-}
-
-.nav-dropdown-menu .nav__tab {
-    width: 100%;
-    text-align: left;
-    padding: 0.6rem 1.2rem;
-    box-sizing: border-box;
-    display: block;
-}
