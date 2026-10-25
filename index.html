@@ -1,14 +1,12 @@
 <nav class="nav">
                 <!-- Выпадающее меню Lists -->
-                <div class="nav__dropdown" style="position: relative; display: inline-block;" @mouseleave="listsOpen = false">
-                    <button class="nav__tab" @click="listsOpen = !listsOpen" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.4rem;">
-                        <span class="type-label-lg">Lists</span>
-                        <span style="font-size: 0.6rem;">&#9660;</span>
+                <div class="nav__dropdown">
+                    <button class="nav__tab">
+                        <span class="type-label-lg">Lists &#9660;</span>
                     </button>
-                    <!-- Выпадающий список -->
-                    <div v-show="listsOpen" style="position: absolute; top: 100%; left: 0; background: var(--color-bg, #1e2124); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); min-width: 140px; z-index: 100; overflow: hidden; display: flex; flex-direction: column;">
-                        <router-link to="/" @click="listsOpen = false" style="padding: 0.8rem 1rem; text-decoration: none; color: inherit; display: block;" class="type-label-lg">Classic</router-link>
-                        <router-link to="/future" @click="listsOpen = false" style="padding: 0.8rem 1rem; text-decoration: none; color: inherit; display: block;" class="type-label-lg">Future</router-link>
+                    <div class="nav__dropdown-content">
+                        <router-link to="/" class="type-label-lg">Classic</router-link>
+                        <router-link to="/future" class="type-label-lg">Future</router-link>
                     </div>
                 </div>
 
@@ -29,7 +27,6 @@
                             alt=""
                         />
                     </button>
-                    <!-- Иконка Discord -->
                     <a class="nav__icon" href="https://discord.gg/wrE3PTVmjD">
                         <img :src="store.dark ? '/assets/discord.svg' : '/assets/discord-dark.svg'" alt="Discord Logo" />
                     </a>
