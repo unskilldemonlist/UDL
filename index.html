@@ -1,12 +1,12 @@
 <nav class="nav">
                 <!-- Выпадающее меню Lists -->
-                <div class="nav__dropdown">
-                    <button class="nav__tab">
+                <div class="nav-dropdown" style="position: relative; display: flex; align-items: center;">
+                    <button class="nav__tab" style="background: transparent; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; font: inherit; color: inherit; padding: 0 1rem; height: 100%;">
                         <span class="type-label-lg">Lists &#9660;</span>
                     </button>
-                    <div class="nav__dropdown-content">
-                        <router-link to="/" class="type-label-lg">Classic</router-link>
-                        <router-link to="/future" class="type-label-lg">Future</router-link>
+                    <div class="nav-dropdown-menu">
+                        <router-link to="/" class="nav__tab type-label-lg">Classic</router-link>
+                        <router-link to="/future" class="nav__tab type-label-lg">Future</router-link>
                     </div>
                 </div>
 
