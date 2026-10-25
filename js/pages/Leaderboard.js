@@ -31,8 +31,8 @@ export default {
                                 <p class="type-label-lg">#{{ i + 1 }}</p>
                             </td>
                             <td class="total">
-                                <!-- Обернули в Number(), чтобы отсечь лишние нули -->
-                                <p class="type-label-lg">{{ localize(Number(ientry.total)) }}</p>
+                                <!-- Всегда показываем ровно 2 знака после запятой через toFixed(2) -->
+                                <p class="type-label-lg">{{ Number(ientry.total).toFixed(2) }}</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
                                 <button @click="selected = i">
@@ -52,8 +52,8 @@ export default {
                                  alt=""
                                  style="width: 32px; height: auto; border-radius: 3px; box-shadow: 0 0 2px rgba(0,0,0,0.3); margin-left: 0.6rem; vertical-align: middle; display: inline-block;" />
                         </h1>
-                        <!-- Здесь тоже убираем лишние нули через Number() -->
-                        <h3 style="text-align: left; margin-bottom: 2.5rem;">{{ Number(entry.total) }}</h3>
+                        <!-- В профиле игрока тоже принудительно выводим 2 знака -->
+                        <h3 style="text-align: left; margin-bottom: 2.5rem;">{{ Number(entry.total).toFixed(2) }}</h3>
                         
                         <!-- Блок Hardest Level -->
                         <template v-if="hardestLevel && hardestLevel.rank">
