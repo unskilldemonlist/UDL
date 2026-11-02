@@ -15,16 +15,16 @@
             "hz": 165
         },
         {
-            "user": "kanonsik",
-            "link": "https://youtu.be/clzHFZHcnpI?si=p_CEKjDLXM2urx92",
-            "percent": 100,
-            "hz": 200
-        },
-        {
             "user": "vaflya",
             "link": "https://youtu.be/Xc-pSCixWkU?si=P8EqNRddFwDQXiqF",
             "percent": 100,
             "hz": 60
+        },
+        {
+            "user": "kanonsik",
+            "link": "https://youtu.be/clzHFZHcnpI?si=p_CEKjDLXM2urx92",
+            "percent": 100,
+            "hz": 200
         }
     ]
 }
