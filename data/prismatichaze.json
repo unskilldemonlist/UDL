@@ -3,11 +3,17 @@
     "name": "Prismatic Haze",
     "author": "Cirtrax",
     "creators": ["Gizbro & Moosh"],
-    "verifier": "KanOne",
-    "verification": "-",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/olWYRwM4NcM?si=-n4qb8GOt-u9kPWS",
     "percentToQualify": 64,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "KanOne",
+            "link": "-",
+            "percent": 100,
+            "hz": 144
+        },
         {
             "user": "vaflya",
             "link": "https://youtu.be/VMnZzuNr_2E?si=if9PD9-cdH9fTrSU",
