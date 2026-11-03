@@ -3,16 +3,28 @@
     "name": "Carcano",
     "author": "Asuith",
     "creators": ["TomsoN & Asuith"],
-    "verifier": "Vergus",
-    "verification": "https://youtu.be/xKeH2_qAAwo?si=p8wlHs0dzYHU2h8y",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/urqtAPAYKYE?si=OM3D_p0OM14Bf4nV",
     "percentToQualify": 59,
     "password": "Free To Copy",
     "records": [
         {
+            "user": "Vergus",
+            "link": "https://youtu.be/xKeH2_qAAwo?si=p8wlHs0dzYHU2h8y",
+            "percent": 100,
+            "hz": 144
+        },
+         {
             "user": "kanonsik",
             "link": "https://www.youtube.com/watch?v=pgNuX5mhZUQ",
             "percent": 100,
             "hz": 200
+        },
+        {
+            "user": "Lyuniks",
+            "link": "https://youtu.be/5HGQVg65O0U?si=Bjq2CpxVd3hmDA5R",
+            "percent": 100,
+            "hz": 100
         }
     ]
 }
