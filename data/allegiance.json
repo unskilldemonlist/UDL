@@ -3,11 +3,17 @@
     "name": "Allegiance",
     "author": "Nikroplays",
     "creators": ["Nikroplays"],
-    "verifier": "S1zE",
-    "verification": "-",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/wcN-5suAqnQ?si=kdHOxVmKYRTlIBUS",
     "percentToQualify": "63",
     "password": "Free To Copy",
     "records": [
+         {
+            "user": "S1zE",
+            "link": "-",
+            "percent": 100,
+            "hz": 165
+        },
         {
             "user": "KanOne",
             "link": "https://youtu.be/i_dm0NyGnBQ?si=zzNg2WefgtFiAL5G",
@@ -19,6 +25,12 @@
             "link": "https://youtu.be/VTIdwvhtHUE?si=kFgsZRJMb4pIwnbT",
             "percent": 100,
             "hz": 200
+        },
+        {
+            "user": "Lyuniks",
+            "link": "https://youtu.be/SiNOL6lXF10?si=cwQo6Ubwed2R62bd",
+            "percent": 100,
+            "hz": 100
         }
     ]
 }
