@@ -3,10 +3,16 @@
     "name": "AKIRA",
     "author": "eridani",
     "creators": ["eridani & denni"],
-    "verifier": "vaflya",
-    "verification": "https://youtu.be/inTsZeUBlnY?si=tRmMPGoK6nvD1Ces",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/uuUrIBU_3Jw?si=RKVG9dIG8ctC07vT",
     "percentToQualify": 55,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "vaflya",
+            "link": "https://youtu.be/inTsZeUBlnY?si=tRmMPGoK6nvD1Ces",
+            "percent": 100,
+            "hz": 60
+        },
     ]
 }
