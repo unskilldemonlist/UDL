@@ -3,11 +3,17 @@
     "name": "Catalyze",
     "author": "ZephiroX",
     "creators": ["ZephiroX"],
-    "verifier": "Vergus",
-    "verification": "https://www.youtube.com/watch?v=DA__-WGKs90",
+    "verifier": "DiMsId",
+    "verification": "https://www.youtube.com/watch?v=wWo7gIVfqCg",
     "percentToQualify": 55,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "Vergus",
+            "link": "https://www.youtube.com/watch?v=DA__-WGKs90",
+            "percent": 100,
+            "hz": 144
+        },
         {
             "user": "kanonsik",
             "link": "https://youtu.be/uS4AjnLkqZg",
