@@ -9,6 +9,12 @@
     "password": "Free To Copy",
     "records": [
         {
+            "user": "DiMsId",
+            "link": "https://www.youtube.com/watch?v=j5QT1c6IDIY",
+            "percent": 100,
+            "hz": 300
+        },
+        {
             "user": "kanonsik",
             "link": "https://youtu.be/ZjP9JVhwQys?si=RsdF6BcjF_dqp_bq",
             "percent": 100,
