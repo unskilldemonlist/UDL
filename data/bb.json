@@ -3,11 +3,17 @@
     "name": "Bloodbath",
     "author": "Riot",
     "creators": ["Riot & More"],
-    "verifier": "Vergus",
-    "verification": "https://youtu.be/Pj3oKDKEQXM?si=lH1NWJ0hj7UZQT15",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/ZLiL4GLSpmE?si=tJM9K8yj-f66JCr9",
     "percentToQualify": 67,
     "password": "Free To Copy",
     "records": [
+         {
+            "user": "Vergus",
+            "link": "https://youtu.be/Pj3oKDKEQXM?si=lH1NWJ0hj7UZQT15",
+            "percent": 100,
+            "hz": 144
+        },
         {
             "user": "S1zE",
             "link": "https://www.youtube.com/watch?v=sARPS6LaKDw",
@@ -25,6 +31,12 @@
             "link": "https://youtu.be/clzHFZHcnpI?si=p_CEKjDLXM2urx92",
             "percent": 100,
             "hz": 200
+        },
+         {
+            "user": "Lyuniks",
+            "link": "https://youtu.be/-kGRw8ty7EI?si=eS-s3IFm08rCJrkp",
+            "percent": 100,
+            "hz": 100
         }
     ]
 }
