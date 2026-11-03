@@ -3,10 +3,16 @@
     "name": "BRUTAL",
     "author": "Tshack",
     "creators": ["airless & Tshack"],
-    "verifier": "KanOne",
-    "verification": "-",
+    "verifier": "DiMsId",
+    "verification": "https://youtu.be/faGDb3F4RiY?si=7flwp7otXvuWRoMR",
     "percentToQualify": 58,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "KanOne",
+            "link": "-",
+            "percent": 100,
+            "hz": 144
+        },
     ]
 }
