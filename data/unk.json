@@ -8,5 +8,11 @@
     "percentToQualify": 61,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "DiMsId",
+            "link": "https://youtu.be/jtsCxrB347A?si=xO-uhd6xtW7YxjYN",
+            "percent": 81,
+            "hz": 300
+        }
     ]
 }
