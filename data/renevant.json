@@ -5,8 +5,14 @@
     "creators": ["nikroplays"],
     "verifier": "DiMsId",
     "verification": "https://youtu.be/czhwtzIccpE?si=cgFnC6uevTrCQ4d7",
-    "percentToQualify": 66,
+    "percentToQualify": 52,
     "password": "Free To Copy",
     "records": [
+        {
+            "user": "KAPUR",
+            "link": "https://youtu.be/0uEtPBPQTgI?si=9zDwhlg8y-t0DyVH",
+            "percent": 52,
+            "hz": 60
+        }
     ]
 }
